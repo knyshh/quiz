@@ -2,7 +2,7 @@
 html+scss+js
 
 //run test app  <br/>
-git clone  https://github.com/knyshh/lun.test.git name_of_your_folder   <br/>
+git clone https://github.com/knyshh/knyshh.github.io.git name_of_your_folder   <br/>
 cd name_of_your_folder  <br/>
 npm i  <br/>
 gulp  <br/>
