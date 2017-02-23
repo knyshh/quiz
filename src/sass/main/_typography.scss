@@ -1,0 +1,96 @@
+/* #Basic typography
+------------------------------------------------------------------------------- */
+a {
+  cursor: pointer !important;
+}
+a:hover, a:focus {
+  text-decoration: none !important;
+
+}
+::-webkit-input-placeholder {
+  color: $placeholder-txt;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder-txt;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $placeholder-txt;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-txt;
+}
+a {
+  cursor: pointer !important;
+}
+a:hover, a:focus {
+  text-decoration: none !important;
+
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  color: #000;
+  background: #ff0;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -.1em;
+}
+sub {
+  bottom: -.25em;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+/*  Blockquotes  */
+blockquote,
+blockquote p {
+  font-size: 17px;
+  line-height: 24px;
+  color: #777;
+  font-style: italic;
+}
+blockquote {
+  margin: 0 0 20px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #ddd;
+}
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+blockquote cite a,
+blockquote cite a:visited,
+blockquote cite a:visited {
+  color: #555;
+}
+img {
+  max-width: 100%;
+}
+p {
+  /*font-size: 14px;*/
+}

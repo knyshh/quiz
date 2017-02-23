@@ -1,0 +1,381 @@
+.wrapper {
+  padding-top: 114px;
+}
+.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.column-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.column-flex {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.button {
+  background: #fff;
+  border: none;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+.input {
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  width: 90%;
+  border: none;
+  padding: 15px;
+  outline: none;
+}
+
+
+.survey {
+  padding-bottom: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &__item {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px;
+    &:last-child {
+      width: 100%;
+      @media only screen and (min-width: 750px) {
+        max-width: 560px;
+        width: 560px;
+      }
+    }
+  }
+  &__item[data-active-question='4'] {
+
+    @media only screen and (min-width: 750px) {
+      max-width: 700px;
+    }
+  }
+
+  &__content {
+  }
+  &__formgroup {
+    margin-bottom: 16px;
+    position: relative;
+  }
+  &__input {
+    @extend .input;
+    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+      min-width: 300px;
+    }
+    &--social {
+      width: 200px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      padding: 0 10px;
+      height: 35px;
+
+      @media only screen and (min-width: 850px) {
+        position: absolute;
+        top: 0;
+        left: 150px;
+        height: 30px;
+        margin-top: 0;
+      }
+    }
+  }
+  &__label {
+    display: inline-block;
+    width: 150px;
+  }
+  &__title-item {
+    padding: 16px 0 40px;
+    font-size: 14px;
+    text-align: left;
+
+    &--step4 {
+
+      margin: 0;
+      display: inline-block;
+      width:  100%;
+      text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        margin-left: 200px;
+        text-align: left;
+      }
+    }
+
+  }
+}
+
+
+.top-navigation {
+  width: 300px;
+  margin: 0 auto;
+
+ &__btn {
+   @extend .button;
+
+   color: $greynoactive;
+   width: 40px;
+   height: 40px;
+   margin-left: 7px;
+
+   &:first-child {
+     margin-left: 0;
+   }
+
+   &.finished {
+     color: $orange;
+   }
+
+   &.active {
+     color: $greyactive;
+     font-weight: 600;
+   }
+ }
+
+}
+
+.bottom-navigation {
+  @extend .flex;
+  @extend .align-center;
+  @extend .column-center;
+  padding: 0 10px;
+
+  &__item {
+    @extend .button;
+    padding: 7px 10px 9px 10px;
+    min-height: 36px;
+    color: $orange;
+    outline: none;
+    font-size: 15px;
+
+    &:hover {
+      background: darken(#fff,1%);
+    }
+    &--previous {
+      margin-right: 16px;
+      margin-top: 136px;
+      &:before {
+        content:'\003c';
+        font-weight: 600;
+        padding-right: 12px;
+      }
+    }
+    &--again {
+      @extend .orange-btn;
+      margin-top: 32px;
+
+    }
+
+    &--next {
+      margin-top: 136px;
+      &:after {
+        content:'\003e';
+        font-weight: 600;
+        padding-left: 12px;
+      }
+    }
+  }
+}
+.pets{
+  display: flex;
+
+
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__item {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-left: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 9999;
+    align-self:  center;
+    margin-bottom: 16px;
+
+    @media only screen and (min-width: 750px) {
+      margin-bottom: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      align-self:  auto;
+    }
+
+    &.active {
+      border: 2px solid $orange;
+    }
+
+
+    &--cat1 {
+      background: url("../img/cat1.jpg") center center no-repeat;
+      background-size: cover;
+    }
+    &--cat2 {
+      background: url("../img/cat2.jpg") center center no-repeat;
+      background-size: cover;
+    }
+    &--cat3 {
+      background: url("../img/cat3.jpg") center center no-repeat;
+      background-size: cover;
+    }
+    &--dog {
+      background: url("../img/dog4.jpg") center center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.info {
+
+  width: 100%;
+  background: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media only screen and (min-width: 750px) {
+    margin: 0 auto;
+    min-width: 560px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+
+
+  &__name {
+    font-size: 20px;
+    padding-bottom: 5px;
+    font-weight: 600;
+  }
+  &__email {
+    padding-bottom: 40px;
+  }
+  &__address {
+    padding-bottom: 40px;
+   }
+  &__socilaurl {
+
+  }
+  &__socialname {
+    color: #0741aa;
+  }
+}
+.orange-btn {
+  background: $orange;
+  color: #fff;
+  &:hover {
+    background: lighten($orange, 3%);
+  }
+}
+
+.col1 {
+  width: 100%;
+  @media only screen and (min-width: 750px) {
+    width: calc(100% - 200px);
+    padding-right: 35px;
+  }
+}
+.col2 {
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+  @media only screen and (min-width: 750px) {
+    width: 200px;
+    text-align: right;
+  }
+
+
+}
+
+.error-block {
+  font-size: 13px;
+
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.error{
+  @extend .error-block;
+  display: none;
+  left: 310px;
+  width: 200px;
+}
+
+.error_show {
+  @extend .error-block;
+  color: $red;
+  display: block;
+}
+.invalid {
+  border: 1px solid $red;
+}
+.error-step4,
+.error-step3 {
+  display: none;
+  color: $red;
+  font-size: 13px;
+}
+.form {
+  position: relative;
+}
+.error-email {
+  display: none;
+  @extend .error-block;
+  left: 310px;
+  width: 200px;
+  color: $red;
+  font-size: 13px;
+}
+.error-social {
+  display: none;
+  @extend .error-block;
+  color: $red;
+  width: 200px;
+  font-size: 13px;
+  bottom: -5px;
+  left: 0px;
+
+  @media only screen and (min-width: 850px) {
+    left: 470px;
+    bottom: auto;
+    top: 0;
+  }
+
+}
+.hide {
+  display: none;
+}
+.show-inline {
+  display: block;
+}
+
+.show-inline {
+  display: inline-block;
+}
+.result-img {
+  margin: 0;
+
+  @media only screen and (min-width: 750px) {
+    float: right;
+  }
+}

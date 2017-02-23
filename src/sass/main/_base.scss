@@ -1,0 +1,200 @@
+/* #Basic Styles
+------------------------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  color: $default-color;
+  font-family: $fontDefault;
+  background: $main-bg;
+  font-size: 15px;
+  line-height: 1.4;
+  width: 100%;
+}
+html,body{}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:focus::-moz-placeholder { color: transparent !important;}
+
+*[autofocus]::-moz-placeholder:focus { color: $placeholder-txt !important;}
+
+*:focus:-moz-placeholder { color: transparent !important;}
+
+*[autofocus]:-moz-placeholder:focus { color: $placeholder-txt !important;}
+
+*:focus::-webkit-input-placeholder { color: transparent !important;}
+
+*[autofocus]::-webkit-input-placeholder { color: $placeholder-txt !important;}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* #Table
+------------------------------------------------------------------------------- */
+table {
+  width: 100%;
+}
+table tr td {
+  text-align: left;
+  vertical-align: top;
+}
+/* #Links
+------------------------------------------------------------------------------- */
+a,
+a:visited {
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+*:focus {
+  outline: none;
+}
+
+/* #Lists
+ ----------------------------------------------------------------------*/
+ol {
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+table th {
+  text-align: left;
+}
+
+/* #Forms
+ ----------------------------------------------------------------------*/
+input[type="radio"], input[type="checkbox"] {
+  margin: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+  font-family: $fontDefault;
+  font-size: 14px;
+  color: $default-color;
+  resize: vertical;
+  font-weight: 400;
+  outline: none;
+  border-radius: 2px;
+
+}
+select,
+textarea {
+  background: $bg-inputs-form;
+}
+button{
+  border: none;
+  font-family: $fontDefault;
+}
+button,input{
+  border: none;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $placeholder-txt;
+}
+select {
+
+}
+textarea {
+  width: 100%;
+  padding: 8px 19px;
+}
+input[type="submit"],
+button,
+.button {
+
+}
+input[type="submit"]:hover,
+button:hover,
+.button:hover {
+
+}
+button[disabled] {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+}
+/* For transition-animation
+ ----------------------------------------------------------------------*/
+a, button, input[type="button"], input[type="submit"] {
+  transition: all .3s ease-in;
+}
+/* #Clearing
+ ----------------------------------------------------------------------*/
+.wrap:after {
+
+}
+footer:after,
+main:after,
+header:after,
+section:after,
+.wrap:after,
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+section,
+.row,
+.clearfix {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill  {
+  background-color: #fff
+}
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #646464;
+  -webkit-box-shadow: none;
+  background-color: #fff;
+}
+.visuallyhidden {
+  display: none;
+}

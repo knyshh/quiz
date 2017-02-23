@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Test lun.ua</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="public/css/main.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="survey">
+
+            <nav class="top-navigation">
+                <button data-activeitem='1' class="top-navigation__btn active">1</button>
+                <button data-activeitem='2' class="top-navigation__btn ">2</button>
+                <button data-activeitem='3' class="top-navigation__btn">3</button>
+                <button data-activeitem='4' class="top-navigation__btn">4</button>
+            </nav><!-- /top-navigation-->
+
+            <div class="survey__content">
+
+                <div class="survey__item active" data-active-question="1">
+                    <p class="survey__title-item">1. Введите имя и e-mail</p>
+                    <form class="form" action="#">
+                        <div class="survey__formgroup">
+                            <input class="survey__input" name="name" id="name" type="text" placeholder="Имя" data-error="Введите свое имя" maxlength="40">
+                        </div>
+                        <div class="survey__formgroup">
+                            <input class="survey__input" id="email" name="email" type="email" data-error="Введите email" placeholder="Email">
+                            <span class="error-email"></span>
+                        </div>
+                    </form>
+                </div><!-- /survey__item -->
+
+                <div class="survey__item hide" data-active-question="2">
+                    <p class="survey__title-item"> 2. Выберите страну и город </p>
+                        <form  class="form" action="#">
+                        <div class="survey__formgroup">
+                            <select class=" select survey__input" id="country" data-error="Введите свою страну" >
+                                <option value="false" disabled selected hidden>Страна</option>
+                            </select>
+                        </div>
+                        <div class="survey__formgroup">
+
+                            <select class="select survey__input" id="city" data-error="Введите свой город">
+                                <option value="false" disabled selected hidden> Город</option>
+                            </select>
+                        </div>
+                    </form>
+                </div><!-- /survey__item -->
+
+
+                <div class="survey__item hide" data-active-question="3">
+                    <p class="survey__title-item">3. Отметьте социальные сети </p>
+                    <form  class="form" action="#">
+                        <div class="survey__formgroup">
+                            <label class="survey__label js-social">
+                                <input class="checkbox" id="fb" type="checkbox" name="socialnetwork[]" value="facebook">
+                                <span>Facebook</span>
+                            </label>
+                            <span class="error-social"></span>
+                            <input id="fb-input" type="text" name="fb" placeholder="Ваша страница в Facebook" class="js-input-social survey__input survey__input--social hide">
+                        </div>
+
+                        <div class="survey__formgroup">
+                            <label class="survey__label js-social">
+                                <input class="checkbox" id="vk" type="checkbox" value="vk">
+                                <span>VK</span>
+                            </label>
+                            <span class="error-social"></span>
+                            <input id="vk-input" type="text" name="vk" placeholder="Ваша страница в VK" class="js-input-social survey__input--social survey__input hide">
+                        </div>
+
+                        <div class="survey__formgroup">
+                            <label class="survey__label js-social">
+                                <input class="checkbox" class="checkbox" id="twitter" type="checkbox" name="socialnetwork[]" value="twitter">
+                                <span>Twitter</span>
+                            </label>
+                            <span class="error-social"></span>
+                            <input id="twitter-input"  type="text" name="twitter" placeholder="Ваша страница в Twitter" class="js-input-social survey__input--social survey__input hide">
+                        </div>
+
+                        <div class="survey__formgroup">
+                            <label class="survey__label js-social">
+                                <input class="checkbox" id="classmate" type="checkbox" name="socialnetwork[]" value="classmate">
+                                <span>Одноклассники</span>
+                            </label>
+                            <span class="error-social"></span>
+                            <input id="classmate-input"  type="text" name="classmate" placeholder="Ваша страница в Одноклассниках" class="js-input-social survey__input--social survey__input hide">
+                        </div>
+
+                        <span class="error-step3"></span>
+
+                    </form>
+                </div><!-- /survey__item -->
+
+
+                <div class="survey__item hide" data-active-question="4">
+                    <p class="survey__title-item survey__title-item--step4">4. Выберите любимого котика </p>
+
+                    <div class="pets">
+                        <div class="pets__item pets__item--cat1 js-cat" data-img="cat1"></div>
+                        <div class="pets__item pets__item--cat2 js-cat" data-img="cat2"></div>
+                        <div class="pets__item pets__item--cat3 js-cat" data-img="cat3"></div>
+                        <div class="pets__item pets__item--dog js-dog"></div>
+                    </div>
+
+                    <span class="error-step4"></span>
+
+                </div><!-- /survey__item -->
+
+
+                <div class="survey__item hide" data-active-question="5">
+                    <div class="info">
+                        <div class="col1">
+                            <p class="info__name"></p>
+                            <p class="info__email"></p>
+
+                            <p class="info__address"> </p>
+
+                            <div class="info__socialwrap"> </div>
+                        </div>
+
+                        <div class="col2">
+                            <div class="pets__item result-img"></div>
+                        </div>
+                    </div><!-- /survey__result -->
+
+                </div><!-- /survey__item -->
+
+            </div><!-- /survey__content -->
+
+
+
+            <nav class="bottom-navigation">
+                <button disabled class="bottom-navigation__item bottom-navigation__item--previous js-prev">Предыдущий</button>
+                <button type="submit" class="bottom-navigation__item bottom-navigation__item--next disabled js-next js-submit">Следующий</button>
+
+                <button class="js-again bottom-navigation__item bottom-navigation__item--again hide">Пройти заново</button>
+
+            </nav><!-- /bottom-navigation -->
+
+        </div><!-- /survey -->
+
+    </div><!-- /wrapper-->
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="public/js/main.js"></script>
+</body>
+</html>
