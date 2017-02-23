@@ -9,15 +9,15 @@ var topnav = require("./module/top-nav.js");
 
 $('.survey__input').maxLength();
 
-$('.js-next').click(function(e) {
+$('.js-next').on('click  touchstart', function(e) {
     goToNextStep(e);
 });
 
-$('.js-prev').click(function() {
+$('.js-prev').on('click  touchstart', function() {
     goToPrevStep();
 });
 
-$('.js-again').click(function() {
+$('.js-again').on('click  touchstart', function() {
     clearState();
 });
 
